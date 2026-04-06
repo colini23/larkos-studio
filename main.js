@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    // Configurar Menú Móvil
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    if(mobileMenu && navLinks) {
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Cerrar el menú al hacer clic en un enlace
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    }
     
     // Cambiar la apariencia del Navbar al hacer scroll
     const navbar = document.getElementById('navbar');
