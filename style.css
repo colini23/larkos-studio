@@ -35,6 +35,17 @@ body {
     font-family: var(--font-body);
     line-height: 1.6;
     overflow-x: hidden;
+    cursor: none; /* Ocultar cursor predeterminado */
+}
+
+/* El cursor personalizado solo se ve en Desktop */
+@media (max-width: 1024px) {
+    body {
+        cursor: auto;
+    }
+    .cursor-dot, .cursor-outline {
+        display: none !important;
+    }
 }
 
 h1,
@@ -256,6 +267,7 @@ ul {
     margin-bottom: 20px;
     background: var(--text-main);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -458,4 +470,121 @@ ul {
     .footer-content {
         grid-template-columns: 1fr;
     }
+}
+
+/* ==================================
+   CUSTOM CURSOR
+   ================================== */
+.cursor-dot,
+.cursor-outline {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    opacity: 0; /* Hide initially */
+    transition: opacity 0.3s ease;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+}
+
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition: all 0.2s ease-out;
+}
+
+/* Hover effects */
+body.cursor-hover .cursor-dot {
+    opacity: 0;
+}
+
+body.cursor-hover .cursor-outline {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}
+
+/* ==================================
+   SOUND CONTROL
+   ================================== */
+.sound-control {
+    position: fixed;
+    bottom: 30px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    z-index: 10001;
+    color: var(--text-muted);
+    transition: var(--transition);
+}
+
+.sound-icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
+
+.sound-waves {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sound-label {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.sound-control:hover .sound-icon {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.sound-control:hover .sound-label {
+    opacity: 0.6;
+    transform: translateX(0);
+}
+
+/* Playing State */
+body.sound-on .sound-icon {
+    color: #ff2a2a;
+    filter: drop-shadow(0 0 5px rgba(255, 42, 42, 0.8));
+    opacity: 1;
+}
+
+body.sound-on .sound-waves {
+    opacity: 1;
+}
+
+body.sound-on .sound-label {
+    color: #ff2a2a;
+    opacity: 0.8;
+}
+
+/* Animation for the waves when on */
+body.sound-on .sound-waves {
+    animation: wavePulse 2s infinite;
+}
+
+@keyframes wavePulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
 }
