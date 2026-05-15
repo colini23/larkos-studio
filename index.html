@@ -4,260 +4,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabitha Rice | Visual Artist</title>
+    <title>Larkos Studio - A Minimalist Indie Horror Game</title>
+    <link rel="icon" type="image/jpg" href="assets/favicon.jpg">
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap"
         rel="stylesheet">
-    <!-- PayPal SDK (Replace 'test' with your actual Client ID) -->
-    <script
-        src="https://www.paypal.com/sdk/js?client-id=Aft5gbvmr3WLkIUuDr2TZTgRlk5SdJ9Wl4DSk5i8VH_brYHB8sY_Dr0qUhQM_8bg1W9NO2iLf0wbmWFh&currency=USD&locale=en_US"></script>
 </head>
 
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo">T. RICE</div>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+    <!-- Navegación -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">
+                <img src="assets/larkos-logo.jpg" alt="Larkos Logo" class="nav-logo">
+                LARKOS <span>STUDIO</span>
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Home</a></li>
+                <li><a href="#juegos">Games</a></li>
+                <li><a href="https://www.instagram.com/larkosstudio?igsh=MW1rbmNiOWY2M2dsaw==" target="_blank"
+                        rel="noopener noreferrer">Community</a></li>
+                <li><a href="#noticias">News</a></li>
+            </ul>
         </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#standalone">Stand Alone</a></li>
-            <li><a href="#shop">Shop</a></li>
-            <li><a href="#prints">Prints</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content reveal">
-            <h1>Tabitha Rice</h1>
-            <p class="subtitle">Exploring emotion through color and form.</p>
-            <a href="#gallery" class="btn-primary">View Works</a>
-        </div>
-        <div class="hero-bg"></div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="about-container reveal">
-            <div class="about-text">
-                <p>Tabitha Rice is a Sydney based artist whose work explores abstract, multi-sensory experiences through
-                    acrylic and layered textures.</p>
-                <p>Her practice is rooted in instinct and materiality, using texture, movement, and repetition to embody
-                    emotional states rather than depict them. Each work exists as a sensory translation — where
-                    perception distorts and feeling takes form.</p>
-                <p>Her pieces invite a physical response, engaging the viewer beyond the visual and into the realm of
-                    sensation.</p>
-            </div>
-            <div class="about-image">
-                <img src="assets/tabitha.jpeg" alt="Tabitha Rice" class="artist-img">
+    <section id="inicio" class="hero">
+        <!-- Video Background -->
+        <video autoplay loop muted playsinline class="hero-video-bg">
+            <!-- Place your video in the assets folder and change this name: -->
+            <source src="assets/larkos_video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1 class="glitch-text" data-text="STEP INTO THE UNKNOWN">STEP INTO THE UNKNOWN</h1>
+            <p>An independent studio born in Barcelona, creating worlds with artists worldwide.</p>
+            <div class="hero-buttons">
+                <a href="#juegos" class="btn-primary">Explore Catalog</a>
+                <a href="#" class="btn-secondary">Watch Trailer</a>
             </div>
         </div>
     </section>
 
+    <!-- Trending Games -->
+    <section id="juegos" class="trending">
+        <div class="container">
+            <h2 class="section-title">Our <span class="text-neon"
+                    style="color: #ff2a2a; text-shadow: 0 0 10px rgba(255, 42, 42, 0.6);">Featured</span> Titles</h2>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery-section">
-        <h2 class="section-title reveal">Dream Residue</h2>
-        <div class="collection-desc reveal">
-            <p>Dream Residue explores the afterimage of experience. The soft, disjointed fragments that remain once a
-                moment has passed.</p>
-            <p>Inspired by dreams, overstimulation, and emotional imprint, each piece exists in a space between
-                recognition and ambiguity. Forms dissolve, textures build and erode, and meaning shifts depending on how
-                you meet it.</p>
-            <p>Nothing is fixed. Everything lingers.</p>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item reveal">
-                <img src="assets/painting-1.jpg" alt="Vibrant Pink Abstraction" class="gallery-img">
-                <div class="item-overlay">
-                    <h3>Overstimulus</h3>
-                    <p>Acrylic on MDF, 2026</p>
+            <div class="game-grid">
+                <!-- Card 1 -->
+                <div class="game-card">
+                    <a href="https://store.steampowered.com/app/4165940/The_Fridge/" class="img-link"
+                        title="Ir a The Fridge en Steam" target="_blank">
+                        <div class="card-img-wrapper">
+                            <img src="assets/game_cover_scifi.png" alt="Sci-Fi Action Game">
+                            <div class="card-overlay">
+                                <span class="badge">New</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="card-info">
+                        <h3>The Fridge</h3>
+                        <p>Horror</p>
+                        <a href="https://store.steampowered.com/app/4165940/The_Fridge/" target="_blank"
+                            class="btn-outline">Learn More</a>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery-item reveal">
-                <img src="assets/painting-2.jpg" alt="The Weight Of Quiet" class="gallery-img">
-                <div class="item-overlay">
-                    <h3>The Weight Of Quiet</h3>
-                    <p>Acrylic on MDF, 2026</p>
-                </div>
-            </div>
-            <div class="gallery-item reveal">
-                <img src="assets/painting-3.jpg" alt="Fractured light" class="gallery-img">
-                <div class="item-overlay">
-                    <h3>Fractured light</h3>
-                    <p>Acrylic on MDF, 2026</p>
-                </div>
-            </div>
 
-        </div>
-    </section>
-
-    <!-- Stand Alone Works Section -->
-    <section id="standalone" class="gallery-section" style="background-color: var(--surface-color); padding-top: 5rem;">
-        <h2 class="section-title reveal">Stand Alone Works</h2>
-        <div class="reveal"
-            style="display: flex; justify-content: center; align-items: center; max-width: 800px; margin: 0 auto; padding: 0 5%;">
-            <div class="gallery-item" style="width: 100%; cursor: default;">
-                <img src="assets/feral-bloom.jpg" alt="Feral Bloom" class="gallery-img"
-                    style="filter: brightness(1) grayscale(0%);">
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Shop Section -->
-    <section id="shop" class="shop-section">
-        <h2 class="section-title reveal">Shop Artworks</h2>
-        <div class="shop-grid">
-            <div class="product-card reveal sold">
-                <img src="assets/painting-1.jpg" alt="Vibrant Pink Abstraction">
-                <div class="product-info">
-                    <h3>Overstimulus</h3>
-                    <p class="product-desc">900 x 600 x 3mm</p>
-                    <p class="price" style="text-decoration: line-through; opacity: 0.5;">$500</p>
-                    <span class="btn-sold">SOLD</span>
+                <!-- Card 2 -->
+                <div class="game-card">
+                    <div class="card-img-wrapper"
+                        style="background: var(--bg-darker); display:flex; align-items:center; justify-content:center;">
+                        <span
+                            style="font-size: 8rem; color: #ff2a2a; text-shadow: 0 0 15px rgba(255, 42, 42, 0.6); opacity: 0.8;">?</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>—</h3>
+                        <p>Coming Soon...</p>
+                        <a href="#" class="btn-outline">Stay Tuned</a>
+                    </div>
                 </div>
-            </div>
-            <div class="product-card reveal">
-                <img src="assets/painting-2.jpg" alt="The Weight Of Quiet">
-                <div class="product-info">
-                    <h3>The Weight Of Quiet</h3>
-                    <p class="product-desc">900 x 600 x 3mm</p>
-                    <p class="price">$500</p>
-                    <a href="mailto:Riice.tabitha@gmail.com?subject=Purchase%20Inquiry:%20The%20Weight%20Of%20Quiet"
-                        class="btn-buy">Inquire to Buy</a>
-                </div>
-            </div>
-            <div class="product-card reveal">
-                <img src="assets/painting-3.jpg" alt="Fractured light">
-                <div class="product-info">
-                    <h3>Fractured light</h3>
-                    <p class="product-desc">900 x 600 x 3mm</p>
-                    <p class="price">$500</p>
-                    <a href="mailto:Riice.tabitha@gmail.com?subject=Purchase%20Inquiry:%20Fractured%20light"
-                        class="btn-buy">Inquire to Buy</a>
-                </div>
-            </div>
-            <div class="product-card reveal sold">
-                <img src="assets/feral-bloom.jpg" alt="Feral Bloom">
-                <div class="product-info">
-                    <h3>Feral Bloom</h3>
-                    <p class="product-desc">Acrylic, textured mixed media on canvas</p>
-                    <p class="product-desc">121.92 × 91.44 cm</p>
-                    <p class="price" style="text-decoration: line-through; opacity: 0.5;">$2,500</p>
-                    <span class="btn-sold">SOLD</span>
+
+                <!-- Card 3 -->
+                <div class="game-card">
+                    <div class="card-img-wrapper"
+                        style="background: var(--bg-darker); display:flex; align-items:center; justify-content:center;">
+                        <span
+                            style="font-size: 8rem; color: #ff2a2a; text-shadow: 0 0 15px rgba(255, 42, 42, 0.6); opacity: 0.8;">?</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>—</h3>
+                        <p>Coming Soon...</p>
+                        <a href="#" class="btn-outline">Stay Tuned</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-    <!-- Prints Section -->
-    <section id="prints" class="shop-section" style="background-color: var(--surface-color);">
-        <h2 class="section-title reveal">Art Prints</h2>
-        <div class="shop-grid">
-            <div class="product-card reveal" style="background-color: var(--bg-color);">
-                <img src="assets/painting-1.jpg" alt="Vibrant Pink Abstraction Print">
-                <div class="product-info">
-                    <h3>Overstimulus (Print)</h3>
-                    <select class="size-selector" data-print-name="Overstimulus Print">
-                        <option value="A4" data-price="80">Size A4 - $80</option>
-                        <option value="A3" data-price="100">Size A3 - $100</option>
-                        <option value="A2" data-price="140">Size A2 - $140</option>
-                        <option value="A1" data-price="400" selected>Size A1 (Limited Edition) - $400</option>
-                    </select>
-                    <p class="price">$400</p>
-                    <p class="shipping-notice">Free Shipping Worldwide</p>
-                    <div id="paypal-button-container-1" class="paypal-container"></div>
+    <!-- Founders Section -->
+    <section id="founders" class="founders">
+        <div class="container">
+            <h2 class="section-title">The <span class="text-neon"
+                    style="color: #ff2a2a; text-shadow: 0 0 10px rgba(255, 42, 42, 0.6);">Visionaries</span> Behind the
+                Shadows</h2>
+            <div class="founders-grid">
+                <!-- Founder 1 -->
+                <div class="founder-card">
+                    <div class="founder-img-container">
+                        <img src="assets/founder1.png" alt="Founder 1">
+                    </div>
+                    <h3>Victor Hermosa</h3>
+                    <p class="role">Founder/Creative Director</p>
                 </div>
-            </div>
-            <div class="product-card reveal" style="background-color: var(--bg-color);">
-                <img src="assets/painting-2.jpg" alt="The Weight Of Quiet Print">
-                <div class="product-info">
-                    <h3>The Weight Of Quiet (Print)</h3>
-                    <select class="size-selector" data-print-name="The Weight Of Quiet Print">
-                        <option value="A4" data-price="80">Size A4 - $80</option>
-                        <option value="A3" data-price="100">Size A3 - $100</option>
-                        <option value="A2" data-price="140">Size A2 - $140</option>
-                        <option value="A1" data-price="400" selected>Size A1 (Limited Edition) - $400</option>
-                    </select>
-                    <p class="price">$400</p>
-                    <p class="shipping-notice">Free Shipping Worldwide</p>
-                    <div id="paypal-button-container-2" class="paypal-container"></div>
+                <!-- Founder 2 -->
+                <div class="founder-card">
+                    <div class="founder-img-container">
+                        <img src="assets/founder2.png" alt="Founder 2">
+                    </div>
+                    <h3>Alberto Cano</h3>
+                    <p class="role">Founder</p>
                 </div>
-            </div>
-            <div class="product-card reveal" style="background-color: var(--bg-color);">
-                <img src="assets/painting-3.jpg" alt="Fractured light Print">
-                <div class="product-info">
-                    <h3>Fractured light (Print)</h3>
-                    <select class="size-selector" data-print-name="Fractured light Print">
-                        <option value="A4" data-price="80">Size A4 - $80</option>
-                        <option value="A3" data-price="100">Size A3 - $100</option>
-                        <option value="A2" data-price="140">Size A2 - $140</option>
-                        <option value="A1" data-price="400" selected>Size A1 (Limited Edition) - $400</option>
-                    </select>
-                    <p class="price">$400</p>
-                    <p class="shipping-notice">Free Shipping Worldwide</p>
-                    <div id="paypal-button-container-3" class="paypal-container"></div>
+                <!-- Founder 3 -->
+                <div class="founder-card">
+                    <div class="founder-img-container">
+                        <img src="assets/founder3.png" alt="Founder 3">
+                    </div>
+                    <h3>Joan Sánchez</h3>
+                    <p class="role">Programmer</p>
+                </div>
+                <!-- Founder 4 -->
+                <div class="founder-card">
+                    <div class="founder-img-container">
+                        <img src="assets/founder4.png" alt="Founder 4">
+                    </div>
+                    <h3>SubashChander Marappan</h3>
+                    <p class="role">Lead Environment Artist</p>
+                </div>
+                <!-- Founder 5 -->
+                <div class="founder-card">
+                    <div class="founder-img-container">
+                        <!-- Añade la imagen del nuevo fundador en la carpeta assets y cambia este nombre. Ejemplo: src="assets/nuevo_fundador.jpg" -->
+                        <img src="assets/founder5.png" alt="Founder 5">
+                    </div>
+                    <h3>Sanjay Kummar</h3>
+                    <p class="role">Senior Environment Artist</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="contact-content reveal">
-            <h2 class="section-title">Contact</h2>
-            <p>Interested in acquiring an artwork or a custom commission?</p>
-            <a href="mailto:Riice.tabitha@gmail.com" class="email-link">Riice.tabitha@gmail.com</a>
-            <div class="social-links">
-                <a href="https://www.instagram.com/tabsrice.art?igsh=cGNnMDNpeXY4Y21o" target="_blank"
-                    rel="noopener noreferrer">Instagram</a>
-
-                <a href="https://x.com/tabsriceart?s=21" target="_blank" rel="noopener noreferrer">Twitter</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="assets/larkos-logo.jpg" alt="Larkos Logo" class="footer-logo-img">
+                    <h2>LARKOS <span>STUDIO</span></h2>
+                </div>
+                <p>Beyond fear. Indie horror crafted by and for players.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
             </div>
         </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="newsletter-content reveal">
-            <h2 class="section-title">Collector's List</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Join for early access to new collections and
-                exhibition invitations.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Email Address" required>
-                <button type="submit" class="btn-buy">Subscribe</button>
-            </form>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Larkos Studio. All rights reserved.</p>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Tabitha Rice. All rights reserved.</p>
     </footer>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <span class="close-lightbox">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-        <div id="lightbox-caption"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Sound Toggle -->
+    <div id="sound-toggle" class="sound-control" title="Toggle Ambience">
+        <div class="sound-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M11 5L6 9H2V15H6L11 19V5Z" />
+                <path d="M19.07 4.93C20.94 6.81 22 9.3 22 12C22 14.7 20.94 17.19 19.07 19.07" class="sound-waves" />
+                <path d="M15.54 8.46C16.47 9.4 17 10.64 17 12C17 13.36 16.47 14.6 15.54 15.54" class="sound-waves" />
+            </svg>
+        </div>
+        <span class="sound-label">Ambience: OFF</span>
     </div>
 
     <script src="main.js"></script>
